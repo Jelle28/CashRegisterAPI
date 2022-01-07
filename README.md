@@ -1,0 +1,2 @@
+# CashRegisterAPI
+Simple hobby project  

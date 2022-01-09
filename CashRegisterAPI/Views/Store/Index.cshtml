@@ -1,0 +1,28 @@
+@model CashRegisterAPI.Models.StoreItem
+
+@{
+    ViewData["Title"] = "Store";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Products of the supermarket</h1>
+    <div class="row">
+    @if (ViewData["StoreItems"] is not null) {
+        @foreach (StoreItem storeItem in (List<StoreItem>)ViewData["StoreItems"])
+        {
+           
+           <div class="card" style="width: 18rem; margin: 5px;">
+               <div class="card-body"> 
+                   <b class="card-title">@storeItem.Description</b>
+                   <p class="card-text">Content: @storeItem.UOM </p>
+                   <p class="card-text">&euro; @storeItem.Price </p>
+               </div>
+
+           </div>
+        }  
+    }
+    </div>
+</div>
+  
+  
+  
